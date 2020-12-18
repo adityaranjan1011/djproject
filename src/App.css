@@ -1,38 +1,130 @@
 .App {
   text-align: center;
+  align-items: center;
+  /* background-color:blue; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-page {
+  height: calc(100vh - 50px);
+  /* background-color: blue; */
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  margin-top: 0px;
+  padding-top: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container,
+.signup-container,
+.profile-container {
+  /* margin-top: 30px; */
+  background-color: #36c182;
+  padding: 40px;
+  margin-top: 30px;
+  height: 200px;
+  width: 400px;
+  border: 1px solid;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input-box {
+  margin: 10px auto;
+  height: 40px;
+  width: 300px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.input-boxes {
+  margin: 10px auto;
+  height: 30px;
+  width:  30px;
+  font-size: 13px;
+  padding-left: 3px;
+  border-radius: 5px;
+  text-align:center;
+}
+.input-mobile {
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiButton-containedPrimary {
+  margin: 0px auto !important;
+  margin-top: 30px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signup-container,
+.profile-container {
+  height: calc(100vh - 200px);
+}
+.container-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+  cursor: pointer;
+  line-height: 2;
+}
+.profile-pic {
+  height: 150px;
+  width: 150px;  
+  border-radius: 5px;
+}
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.product_price{
+  text-align: left;
+}
+.product-rating{
+  margin: 0px auto;
+}
+label{
+  margin-right: 30px;
+  margin-left: 10px;  
+}
+
+@media only screen and (min-width:1024px){
+
+.signup-container,
+.profile-container{
+  height:auto
+}
+}
+@media only screen and (max-width:768px){
+  .product-details{
+  grid-template-columns: none;
+  height: 400px;
+}
+.profile-pic{
+  width: auto;
+  height: 175px;
+}
+.product_price{
+  padding-left: 25px;
+}
+}
+@media only screen and (max-width:375px){
+ .login-page{
+   width: auto;
+ } 
+ .signup-container,
+.profile-container,.input-container{
+  height:auto;
+  width:auto
+}
+.profile-pic{
+  width: 275px;
+}
+.input-box{
+  width: 250px;
+}
 }
